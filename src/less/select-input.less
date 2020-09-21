@@ -1,0 +1,100 @@
+.select-input {
+	width: 100%;
+	position: relative;
+	margin-top: 9px;
+//	padding-bottom: 50px;
+	padding-bottom: 2px;
+}
+
+.select-input__title {
+	// color: @text-gray;
+	// font-size: @button-font-size;
+	border-bottom: 1px solid @gray;
+	cursor: pointer;
+	position: relative;
+  padding-right: 2em;
+}
+
+.select-input__chosen-text {
+	position: absolute;
+//	top: -0.1em;
+	bottom: 0.1em;
+	color: black;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 93%; // костыль! должно быть 100%
+	display: inline-block;
+	overflow: hidden;
+}
+
+.select-input__title .select-input__title-text {
+	display: block;
+	position: relative;
+	transform-origin: left;
+	top: -0.28em;
+	transition: 0.25s ease all;
+}
+
+.select-input__title::before {
+	content: "";
+	display: inline-block;
+	border: 0.5em solid transparent;
+//   border-top-color: @gray;
+  border-bottom: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+	right: 10px;
+//	top: -0.15em;
+  bottom: 0.7em;
+}
+
+.select-input__title--active .select-input__title-text {
+	top: -1.35em;
+	transform: scale(0.83);
+}
+
+
+
+.select-input__list {
+	position: absolute;
+	background-color: white;
+	z-index: 10;
+	width: 100%;
+	max-width: 700px;
+	display: flex;
+	flex-direction: column;
+	top: 20px;
+	// box-shadow: @shadow-more;
+	// border-radius: @window-radius;
+	overflow: hidden;
+	display: none;
+	transition-delay: 0.25s;
+}
+
+.select-input--active .select-input__list {
+	display: block;
+}
+
+.select-input--active .select-input__title {
+	// border-color: @main-color;
+}
+
+.select-input--active .select-input__title::before {
+	// border-top-color: @main-color;
+}
+
+.select-input__item label {
+	cursor: pointer;
+	padding: 0.7em 0;
+	padding-left: 1em;
+	display: block;
+}
+
+.select-input__item:hover {
+	// background-color: @light-gray
+}
+
+.select-input__input {
+	display: none;
+}

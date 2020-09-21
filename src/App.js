@@ -6,6 +6,9 @@ import MainPageComponent from './components/MainPageComponent.jsx'
 import FooterComponent from './components/FooterComponent.jsx'
 import NoticeComponent from './components/NoticeComponent.jsx'
 import { store } from './store';
+import CreateEvent1Component from './components/CreateEvent1Component.jsx'
+import CreateEvent2Component from './components/CreateEvent2Component.jsx'
+import CreateEvent3Component from './components/CreateEvent3Component.jsx'
 
 class App extends React.Component {
   constructor(props) {
@@ -30,6 +33,9 @@ class App extends React.Component {
             <div className="main__content">
               <Switch>
                 <Route path="/" exact component={MainPageComponent}/>
+                <Route path="/createEvent/step1" exact component={CreateEvent1Component}/>
+                <Route path="/createEvent/step2" exact component={CreateEvent2Component}/>
+                <Route path="/createEvent/step3" exact component={CreateEvent3Component}/>
               </Switch>
             </div>
           </div>
