@@ -60,7 +60,7 @@ class RegistrationComponent extends Component {
     render() {
         return(       
             <React.Fragment>
-                <ClosePopupComponent close={this.props.close} isOpen={true}/>
+                <ClosePopupComponent close={this.props.close} isOpen={true} visible/>
                 {this.state.isRegistrationComplete === false &&
                 <div className="registration">
                     <p>Регистрация</p>

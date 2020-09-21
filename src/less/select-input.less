@@ -39,7 +39,7 @@
 	content: "";
 	display: inline-block;
 	border: 0.5em solid transparent;
-//   border-top-color: @gray;
+  border-top-color: @gray;
   border-bottom: 0;
   width: 0;
   height: 0;
@@ -65,8 +65,8 @@
 	display: flex;
 	flex-direction: column;
 	top: 20px;
-	// box-shadow: @shadow-more;
-	// border-radius: @window-radius;
+	box-shadow: 0 3px 18px -10px #34495e;
+	border-radius: 5px;
 	overflow: hidden;
 	display: none;
 	transition-delay: 0.25s;
@@ -77,11 +77,11 @@
 }
 
 .select-input--active .select-input__title {
-	// border-color: @main-color;
+	border-color: @gray;
 }
 
 .select-input--active .select-input__title::before {
-	// border-top-color: @main-color;
+	border-top-color: @gray;
 }
 
 .select-input__item label {
@@ -92,7 +92,7 @@
 }
 
 .select-input__item:hover {
-	// background-color: @light-gray
+	background-color: @gray-light;
 }
 
 .select-input__input {

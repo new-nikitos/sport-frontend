@@ -13,6 +13,12 @@ class ClosePopupComponent extends Component {
         }
     }
 
+    componentDidMount() {
+        console.log("hi");
+        if (this.props.visible)
+            this.modalButton.current.classList.add();
+    }
+
     escFunction = (e) => {
         if (e.keyCode === 27) {
             this.close();

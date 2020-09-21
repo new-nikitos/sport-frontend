@@ -3,6 +3,7 @@ import ApiService from '../scripts/ApiService.js'
 import Cookie from '../scripts/Cookie.js'
 import InputComponent from "../components/service/InputComponent";
 import FormControlComponent from "../components/service/FormControlComponent";
+import ClosePopupComponent from "../components/service/ClosePopupComponent";
 import axios from 'axios';
 
 class LoginComponent extends Component {
@@ -42,6 +43,7 @@ class LoginComponent extends Component {
         return(       
             <div className="login">
                 <p>Войти</p>
+                <ClosePopupComponent isOpen={true} close={this.props.close} visible/>
                 <FormControlComponent onSubmit={data => this.send(data)} render={
                             handleChange => (
                                 <React.Fragment>
