@@ -36,7 +36,7 @@ class HeaderComponent extends Component {
           <div className="header">
             <a href="/" className="header__logo logo-container">
               <img className="logo-container__img" alt="logo" src={logo}/>
-              <span className="logo-container__text">Спортивный портал республики Татарстан</span>
+              <span className="logo-container__text">Спортивный портал<br/> республики Татарстан</span>
             </a>
 
             <div className="header__location">Казань</div>
@@ -51,8 +51,8 @@ class HeaderComponent extends Component {
             <div className="header__buttons">
               {this.state.nameAuthorized === false &&
                 <React.Fragment>
-                  <button onClick={this.handleLoginButton}>войти</button>
-                  <button onClick={this.handleRegistrationButton}>регистрация</button>
+                  <button className="button--log header__button-log" onClick={this.handleLoginButton}>Войти</button>
+                  <button className="button--registration" onClick={this.handleRegistrationButton}>Регистрация</button>
                 </React.Fragment>
               }
               {this.state.nameAuthorized &&
@@ -62,10 +62,10 @@ class HeaderComponent extends Component {
 
 
             {this.state.registrationIsOpen &&
-              <RegistrationComponent/>
+              <RegistrationComponent close={this.handleRegistrationButton}/>
             }
             {this.state.loginIsOpen &&
-              <LoginComponent/>
+              <LoginComponent close={this.handleLoginButton}/>
             }
           </div>
         )

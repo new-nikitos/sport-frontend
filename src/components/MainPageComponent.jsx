@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import TranslationComponent from "../components/TranslationComponent";
+import CategoriesComponent from "../components/CategoriesComponent";
 
 class MainComponent extends Component {
     constructor(props) {
@@ -12,7 +14,9 @@ class MainComponent extends Component {
     render() {
         return(        
             <div className="main-page">
-                <p className="main-page__text">Главная страница</p>
+                <CategoriesComponent/>
+                <TranslationComponent/>
+                {/* <p className="main-page__text">Главная страница</p> */}
             </div>
         )
     }

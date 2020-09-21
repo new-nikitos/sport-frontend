@@ -3,6 +3,7 @@ import ApiService from '../scripts/ApiService.js'
 import Cookie from '../scripts/Cookie.js'
 import InputComponent from "../components/service/InputComponent";
 import FormControlComponent from "../components/service/FormControlComponent";
+import axios from 'axios';
 
 class LoginComponent extends Component {
     constructor(props) {
@@ -19,6 +20,7 @@ class LoginComponent extends Component {
         ApiService.auth(data)
             .then(res => {
                 Cookie.setCookie("token", res.data.token, "secure");
+                axios.defaults.headers.common.Authorization = res.data.token;
                 Cookie.setCookie("userId", res.data.user.id, "secure");
                 Cookie.setCookie("username", res.data.user.username, "secure");
                 Cookie.setCookie("authorities", res.data.user.authorities, "secure");

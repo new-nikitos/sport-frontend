@@ -1,11 +1,12 @@
 import axios from 'axios';
+import { store } from '../store';
 
 // const url = "http://localhost:8080";
 const url = "http://192.168.0.106:8080";
 
 class ApiService {
     error() {
-        console.log("ошибка");
+        store.dispatch({ type: true });
     }
 
     registration(data) {
@@ -14,6 +15,10 @@ class ApiService {
 
     auth(data) {
         return axios.post(`${url}/auth`, data).catch(this.error);
+    }
+
+    preference(data) {
+        return axios.post(`${url}/account/preferences`, data).catch(this.error);
     }
 }
 
