@@ -55,14 +55,14 @@ class LoginComponent extends Component {
                                         </React.Fragment>
                                     )
                                 }/>
-                        <div style={{ textAlign: "center" }}>
+                        <div className="login__last" style={{ textAlign: "center" }}>
                             <span style={{ fontSize: '12px', color: '#9F9F9F' }}>У вас нет учетной записи?</span>
                             <a href="#" className="link">Зарегистрироваться</a>
                         </div>
                     </div>
-                    <div className="image">
+                    {/* <div className="image">
                         <img src={background} height="770" width="700" />
-                    </div>
+                    </div> */}
                 </div>
             </React.Fragment>
         )

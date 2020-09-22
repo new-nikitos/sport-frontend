@@ -48,6 +48,10 @@ class ApiService {
     getSingleSport() {
         return axios.get(`${url}/singleSportEvent/getList`).catch(this.error);
     }
+
+    getEvents() {
+        return axios.get(`${url}/events/fetchAll`).catch(this.error);
+    }
 }
 
 export default new ApiService();

@@ -63,7 +63,7 @@ class RegistrationComponent extends Component {
                 <ClosePopupComponent close={this.props.close} isOpen={true} visible/>
                 {this.state.isRegistrationComplete === false &&
                 <div className="registration">
-                    <p>Регистрация</p>
+                    <h2 className="authorization__header">Регистрация</h2>
                     <FormControlComponent onSubmit={data => this.send(data)} render={
                                 handleChange => (
                                     <React.Fragment>
@@ -73,8 +73,8 @@ class RegistrationComponent extends Component {
                                         <InputComponent text="Почта" name="email" handleChange={handleChange} type="email" maxLength="60" placeholder="Ваш e-mail" required/>
                                         <InputComponent text="Пароль" name="password" handleChange={handleChange} type="password" maxLength="60" required/>
 
-                                        <p>Ваши предпочтения</p>
-                                        <div>
+                                        <p className="registration__sub-title">Ваши предпочтения</p>
+                                        <div className="registration__categories">
                                             <CheckboxComponent text="Футбол" name="0" handleChange={this.handleChange} type="checkbox" maxLength="20"/>
                                             <CheckboxComponent text="Хоккей" name="1" handleChange={this.handleChange} type="checkbox" maxLength="20" />
                                             <CheckboxComponent text="Баскетбол" name="2" handleChange={this.handleChange} type="checkbox" maxLength="20" />
