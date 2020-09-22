@@ -1,0 +1,62 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.authorization {
+    margin-top: 140px;
+    margin-left: 70px;
+    width: 430px;
+    height: 640px;
+    background: #FFFFFF;
+    opacity: 0.8;
+}
+
+.authorization__header {
+    width: 135px;
+    height: 27px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 27px;
+    color: #347CC4;
+}
+
+.text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.image {
+    margin-left: 180px;
+    width: 556px;
+    height: 750px;
+    opacity: 0.8;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.btn-authorization {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.password-control {
+    position: absolute;
+    top: 40px;
+    right: 6px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(/sport-frontend/src/img/view.png) 0 0 no-repeat;
+}
+
+.password-control.view {
+    background: url(/sport-frontend/src/img/view.png) 0 0 no-repeat;
+}

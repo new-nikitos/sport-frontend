@@ -1,0 +1,211 @@
+.general-page {
+    /* margin-right: 110px;
+    margin-left: 110px; */
+    margin-bottom: 60px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-settings {
+    width: 188px;
+    height: 53px;
+    text-align: center;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.110058);
+    border-radius: 10px;
+}
+
+.live {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.live-text {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    margin-left: 20px;
+    /* identical to box height, or 162% */
+    text-transform: uppercase;
+    color: #347CC4;
+}
+
+.live-icon {
+    margin-top: 10px;
+}
+
+.icon-video {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.icon-video__full {
+    display: flex;
+    justify-self: end;
+}
+
+.events-sort {
+    display: flex;
+    height: 430px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.event-description {
+    margin-left: 8.25%;
+    margin-right: 42.27%;
+    margin-bottom: 21.2%;
+    margin-top: 10.93%;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.event-description__date {
+    position: absolute;
+    left: 8.25%;
+    right: 60.82%;
+    top: 63.59%;
+    bottom: 14.67%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    /* or 142% */
+    color: #FFFFFF;
+}
+
+.btn-about {
+    position: absolute;
+    height: 22px;
+    left: 61.11%;
+    right: 1.34%;
+    top: 70%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.upcoming-events {
+    margin-top: 20px;
+}
+
+.event1 {
+    position: relative;
+    width: 388px;
+    height: 191px;
+    background: url('../img/upcoming-events/1.png');
+}
+
+.event2 {
+    position: relative;
+    width: 388px;
+    height: 191px;
+    background: url('../img/upcoming-events/2.png');
+}
+
+.event3 {
+    position: relative;
+    width: 388px;
+    height: 191px;
+    background: url('../img/upcoming-events/3.png');
+}
+
+.event4 {
+    position: relative;
+    width: 388px;
+    height: 191px;
+    background: url('../img/upcoming-events/4.png');
+}
+
+.event5 {
+    position: relative;
+    width: 388px;
+    height: 191px;
+    background: url('../img/upcoming-events/5.png');
+}
+
+.event6 {
+    position: relative;
+    width: 388px;
+    height: 191px;
+    background: url('../img/upcoming-events/6.png');
+}
+
+.header-text {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 41px;
+    color: #000000;
+}
+
+.sport-corousel {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sports {
+    position: relative;
+}
+
+.map {
+    width: 280px;
+    height: 80px;
+}
+
+.map-preview {
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+}
+
+.map-button {
+    position: absolute;
+    bottom: 1px;
+}
+
+.map-preview__button {
+    position: absolute;
+    bottom: 52px;
+}
+
+.sport-organizations {
+    margin-top: 70px;
+}
+
+.organization-logo {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.organization-logo__block {
+    width: 215px;
+    height: 200px;
+}
+
+.organization-logo__name {
+    margin-top: 15px;
+    /* font-weight: bold; */
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #000000;
+    /* Inside Auto Layout */
+    display: flex;
+    justify-content: start;
+}

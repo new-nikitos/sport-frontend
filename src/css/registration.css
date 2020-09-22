@@ -1,0 +1,76 @@
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.registration-container {
+    background: #FFFFFF;
+    margin-top: 50px;
+    margin-left: 70px;
+    width: 430px;
+    height: 640px;
+    background: #FFFFFF;
+    opacity: 0.8;
+}
+
+.registration__header {
+    width: 135px;
+    height: 27px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 27px;
+    color: #347CC4;
+}
+
+.text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.password-control {
+    position: absolute;
+    top: 40px;
+    right: 6px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(/sport-frontend/src/img/view.png) 0 0 no-repeat;
+}
+
+.password-control.view {
+    background: url(/sport-frontend/src/img/view.png) 0 0 no-repeat;
+}
+
+.image {
+    margin-left: 180px;
+    width: 556px;
+    height: 750px;
+    opacity: 0.8;
+}
+
+.btn-registration {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.sport-container {
+    height: 40px;
+    align-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.role-container {
+    display: flex;
+    justify-content: space-between;
+}
