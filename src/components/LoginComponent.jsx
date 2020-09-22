@@ -41,22 +41,24 @@ class LoginComponent extends Component {
 
     render() {
         return(       
-            <div className="login">
-                <p>Войти</p>
+            <React.Fragment>
                 <ClosePopupComponent isOpen={true} close={this.props.close} visible/>
-                <FormControlComponent onSubmit={data => this.send(data)} render={
-                            handleChange => (
-                                <React.Fragment>
-                                    <InputComponent text="Почта" name="email" handleChange={handleChange} type="email" maxLength="20" placeholder="Ваш e-mail" required/>
-                                    <InputComponent text="Пароль" name="password" handleChange={handleChange} type="password" maxLength="20" required/>
-                                    {this.state.isIncorrectData &&
-                                        <p>Неправильный логин или пароль</p>
-                                    }
-                                    <button type="submit" className="button">Войти</button>
-                                </React.Fragment>
-                            )
-                        }/>
-            </div>
+                <div className="login">
+                    <p>Войти</p> 
+                    <FormControlComponent onSubmit={data => this.send(data)} render={
+                                handleChange => (
+                                    <React.Fragment>
+                                        <InputComponent text="Почта" name="email" handleChange={handleChange} type="email" maxLength="20" placeholder="Ваш e-mail" required/>
+                                        <InputComponent text="Пароль" name="password" handleChange={handleChange} type="password" maxLength="20" required/>
+                                        {this.state.isIncorrectData &&
+                                            <p>Неправильный логин или пароль</p>
+                                        }
+                                        <button type="submit" className="button">Войти</button>
+                                    </React.Fragment>
+                                )
+                            }/>
+                </div>
+            </React.Fragment>
         )
     }
 }
