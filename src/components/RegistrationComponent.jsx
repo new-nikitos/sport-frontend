@@ -67,11 +67,11 @@ class RegistrationComponent extends Component {
                     <FormControlComponent onSubmit={data => this.send(data)} render={
                                 handleChange => (
                                     <React.Fragment>
-                                        <InputComponent text="Логин" name="username" handleChange={handleChange} type="name" maxLength="20"/>
-                                        <InputComponent text="Имя" name="firstName" handleChange={handleChange} type="name" maxLength="20" placeholder="Ваше имя" required/>
-                                        <InputComponent text="Фамилия" name="middleName" handleChange={handleChange} type="name" maxLength="20" placeholder="Ваша фамилия" required/>
-                                        <InputComponent text="Почта" name="email" handleChange={handleChange} type="email" maxLength="20" placeholder="Ваш e-mail" required/>
-                                        <InputComponent text="Пароль" name="password" handleChange={handleChange} type="password" maxLength="20" required/>
+                                        <InputComponent text="Логин" name="username" handleChange={handleChange} type="text" maxLength="60" required/>
+                                        <InputComponent text="Имя" name="firstName" handleChange={handleChange} type="text" maxLength="60" placeholder="Ваше имя" required/>
+                                        <InputComponent text="Фамилия" name="middleName" handleChange={handleChange} type="text" maxLength="60" placeholder="Ваша фамилия" required/>
+                                        <InputComponent text="Почта" name="email" handleChange={handleChange} type="email" maxLength="60" placeholder="Ваш e-mail" required/>
+                                        <InputComponent text="Пароль" name="password" handleChange={handleChange} type="password" maxLength="60" required/>
 
                                         <p>Ваши предпочтения</p>
                                         <div>
@@ -86,7 +86,7 @@ class RegistrationComponent extends Component {
                                             <CheckboxComponent text="Дзюдо" name="8" handleChange={this.handleChange} type="checkbox" maxLength="20" />
                                             <CheckboxComponent text="Атлетика" name="9" handleChange={this.handleChange} type="checkbox" maxLength="20" />
                                         </div>
-                                        <button type="submit" className="button">Зарегистрироваться</button>
+                                        <button type="submit" className="btn btn-primary btn-authorization">Зарегистрироваться</button>
                                     </React.Fragment>
                                 )
                             }/>

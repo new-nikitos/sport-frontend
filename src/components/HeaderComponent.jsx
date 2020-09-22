@@ -43,9 +43,9 @@ class HeaderComponent extends Component {
 
             <ul className="header__list">
               <li className="header__item"><a href="#" className="header__link">О проекте</a></li>
-              <li className="header__item"><a href="#" className="header__link">Новости</a></li>
-              <li className="header__item"><a href="#" className="header__link">Вопросы</a></li>
-              <li className="header__item"><a href="#" className="header__link">Контакты</a></li>
+              <li className="header__item"><a href="/createMailSent" className="header__link">Рассылка</a></li>
+              <li className="header__item"><a href="/createEvent/step1" className="header__link">Мероприятия</a></li>
+              {/* <li className="header__item"><a href="#" className="header__link">Контакты</a></li> */}
             </ul>
 
             <div className="header__buttons">

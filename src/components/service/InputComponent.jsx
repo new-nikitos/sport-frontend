@@ -44,8 +44,8 @@ class InputComponent extends Component {
 	
 	render() {
 		return(
-			<div className="input-container">
-				<label ref={this.label} htmlFor={this.props.name} className="input-container__label label">{this.props.text}</label>
+			<div className="input-container form-group" style={this.props.style}>
+				<label ref={this.label} htmlFor={this.props.name} className="form-control-sm input-container__label label text">{this.props.text}</label>
 				<input ref={this.input} type={this.props.type} id={this.props.name} className="input-container__input" maxLength={this.props.maxLength} onChange={(e) => this.onChange(e)} onFocus={this.active} onBlur={this.blur} autoComplete={this.props.autoComplete} placeholder={this.props.placeholder}/>
 			</div>
 		)

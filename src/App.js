@@ -9,6 +9,7 @@ import { store } from './store';
 import CreateEvent1Component from './components/CreateEvent1Component.jsx'
 import CreateEvent2Component from './components/CreateEvent2Component.jsx'
 import CreateEvent3Component from './components/CreateEvent3Component.jsx'
+import CreateMailSentComponent from './components/CreateMailSentComponent.jsx'
 
 class App extends React.Component {
   constructor(props) {
@@ -36,6 +37,7 @@ class App extends React.Component {
                 <Route path="/createEvent/step1" exact component={CreateEvent1Component}/>
                 <Route path="/createEvent/step2" exact component={CreateEvent2Component}/>
                 <Route path="/createEvent/step3" exact component={CreateEvent3Component}/>
+                <Route path="/createMailSent" exact component={CreateMailSentComponent}/>
               </Switch>
             </div>
           </div>

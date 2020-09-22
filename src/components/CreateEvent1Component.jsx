@@ -25,6 +25,7 @@ class CreateEvent1Component extends Component {
                     let categories = [];
                     for(let i = 0; i < res.data.length; i++) {
                         categories[i] = {};
+
                         categories[i]["id"] = res.data[i].categoryId;
                         categories[i]["text"] = res.data[i].caption;
                     }
@@ -53,10 +54,20 @@ class CreateEvent1Component extends Component {
     }
 
     send(data) {
+        for (let i in data) {
+            if (i === "eventDate") {
+                console.log(typeof(data[i]))
+            }
+            if (i === "eventTime") {
+                console.log(typeof(data[i]))
+            }
+        }
         console.log(data);
         ApiService.createEvent1(data)
             .then(res => {
                 if (res)
+                    console.log(res.data);
+                    localStorage.setItem("id", res.data);
                     window.location.href=`/createEvent/step2`;
             })
     }

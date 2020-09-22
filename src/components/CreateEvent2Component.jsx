@@ -17,6 +17,7 @@ class CreateEvent2Component extends Component {
 
     send(data) {
         console.log(data);
+        data["id"] = localStorage.getItem("id");
         axios.defaults.headers.common.Authorization = Cookie.getCookie("token");
         ApiService.createEvent2(data)
             .then(res => {

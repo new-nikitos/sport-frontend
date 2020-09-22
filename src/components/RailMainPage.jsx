@@ -34,7 +34,7 @@ class MainComponent extends Component {
     render() {
         return (
             <div className="general-page">
-                <div className="tabs">
+                {/* <div className="tabs">
                     <div className="tabs__date">
                         <select className="btn-settings" style={{ border: 'none'}}>
                             <option selected>Дата</option>
@@ -70,7 +70,7 @@ class MainComponent extends Component {
                     <div className="tabs__child">
                         <button className="btn btn-settings">Детям</button>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="live">
                     <img src={livePicture} width="1418" height="339" />

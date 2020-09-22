@@ -23,6 +23,7 @@ class CreateEvent3Component extends Component {
     send(data) {
         console.log(data);
         axios.defaults.headers.common.Authorization = Cookie.getCookie("token");
+        data["id"] = localStorage.getItem("id");
         ApiService.createEvent3(data)
             .then(res => {
                 if (res)

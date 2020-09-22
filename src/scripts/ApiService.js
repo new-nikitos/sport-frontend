@@ -30,15 +30,23 @@ class ApiService {
     }
 
     createEvent1(data) {
-        // return axios.post(`${url}/`, data).catch(this.error);
+        return axios.post(`${url}/events/saveStepOne`, data).catch(this.error);
     }
 
     createEvent2(data) {
-        // return axios.post(`${url}/`, data).catch(this.error);
+        return axios.post(`${url}/events/saveStepTwo`, data).catch(this.error);
     }
 
     createEvent3(data) {
-        // return axios.post(`${url}/`, data).catch(this.error);
+        return axios.post(`${url}/events/saveStepThree`, data).catch(this.error);
+    }
+
+    getTeamSport() {
+        return axios.get(`${url}/teamSportEvent/getList`).catch(this.error);
+    }
+
+    getSingleSport() {
+        return axios.get(`${url}/singleSportEvent/getList`).catch(this.error);
     }
 }
 
