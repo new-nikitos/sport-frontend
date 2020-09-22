@@ -48,7 +48,7 @@ class TextAreaComponent extends Component {
     
     render() {
         return(
-            <div className="text-area">
+            <div className="text-area" style={this.props.style}>
                 <label ref={this.label} htmlFor={this.props.name} className="text-area__label label">{this.props.text}</label>
                 <textarea ref={this.input} className="text-area__input" onChange={(e) => this.onChange(e)} onFocus={this.active} onBlur={this.blur} id={this.props.name} autoComplete={this.props.autoComplete}></textarea>
             </div>

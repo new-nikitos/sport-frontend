@@ -6,6 +6,8 @@ import SelectInputComponent from "../components/service/SelectInputComponent";
 import ApiService from '../scripts/ApiService';
 import Cookie from '../scripts/Cookie.js'
 import axios from 'axios';
+import checkboxes from '../img/step-third.png';
+import '../css/create-event.css';
 
 class CreateEvent3Component extends Component {
     constructor(props) {
@@ -26,6 +28,7 @@ class CreateEvent3Component extends Component {
         data["id"] = localStorage.getItem("id");
         ApiService.createEvent3(data)
             .then(res => {
+                console.log(res);
                 if (res)
                     window.location.href=`/`;
             })
@@ -34,12 +37,14 @@ class CreateEvent3Component extends Component {
     render() {
         return(        
             <div className="create-event">
-                <div className="create-event__background"></div>
+                <div className="create-event__background">
+                    <img className="checkboxes" src={checkboxes} />
+                </div>
                 <div className="create-event__form">
-                    <p>Шаг 3 из 3</p>
-                    <h2>Дополнение</h2>
-                    <p>Необязательный поля, поэтому их можно пропустить, но благодаря им, участник более подробно поймет, что от него требуют.</p>
-                    <p>Возрастная категория</p>
+                    <div className="step-text" >Шаг 3 из 3</div>
+                    <h2 className="header-text">Дополнение</h2>
+                    <div className="label-text">Необязательный поля, поэтому их можно пропустить, но благодаря им, участник более подробно поймет, что от него требуют.</div>
+                    <div className="label-text">Возрастная категория</div>
                     <FormControlComponent onSubmit={data => this.send(data)} render={
                         handleChange => (
                             <React.Fragment>
@@ -50,9 +55,14 @@ class CreateEvent3Component extends Component {
                                 <SelectInputComponent title="По характеру зачета" id="type" handleChange={handleChange} data={this.type}/>
                                 <SelectInputComponent title="По месту проведения" id="place" handleChange={handleChange} data={this.place}/>
 
-                                <div>
-                                    <a href="/createEvent/step2">Назад</a>
-                                    <button type="submit" className="button">Следующий шаг</button>
+                                <div className="footer-buttons">
+                                        <div>
+                                            <span style={{ color: '#347CC4' }}>🠐</span>
+                                            <a href="/createEvent/step2" className="link">Назад</a>
+                                        </div>
+                                        <div>
+                                            <button type="submit" className="btn btn-primary">Cледующий шаг</button>
+                                        </div>
                                 </div>
                             </React.Fragment>
                         )

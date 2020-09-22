@@ -1,0 +1,78 @@
+.create-event {
+    display: flex;
+}
+
+.create-event__background {
+    position: relative;
+    width: 516px;
+    height: 900px;
+    background: #C43434;
+}
+.create-event__form {
+        margin-left: 117px;
+}
+
+.checkboxes {
+    position: absolute;
+    top: 30%;
+    margin-left: 20%;
+}
+
+.step-text {
+    margin-top: 36px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    letter-spacing: 0.02em;
+    /* Gray */
+    color: #9F9F9F;
+    opacity: 0.8;
+}
+
+.header-text {
+    margin-top: 90px;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 36px;
+    /* identical to box height, or 129% */
+    letter-spacing: 0.02em;
+    /* Black */
+    color: #000000;
+}
+
+.label-text {
+    margin-top: 12px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+    letter-spacing: 0.02em;
+    /* Gray */
+    color: #9F9F9F;
+}
+
+.link {
+    margin-left: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    letter-spacing: 0.02em;
+    /* Blue */
+    color: #347CC4;
+}
+
+.link:hover {
+    color: #2366aa;;
+}
+
+
+.footer-buttons {
+    margin-top: 230px;
+    width: 562px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -5,6 +5,8 @@ import TextAreaComponent from "./service/TextAreaComponent";
 import ApiService from '../scripts/ApiService';
 import Cookie from '../scripts/Cookie.js'
 import axios from 'axios';
+import '../css/create-event.css';
+import checkboxes from '../img/step-second.png'
 
 class CreateEvent2Component extends Component {
     constructor(props) {
@@ -29,26 +31,35 @@ class CreateEvent2Component extends Component {
     render() {
         return(        
             <div className="create-event">
-                <div className="create-event__background"></div>
-                <div className="create-event__form">
-                    <p>Шаг 2 из 3</p>
-                    <h2>О мероприятии</h2>
-                    <p>Выбрать критерии в соответсвии с вашим видом спорта.</p>
-                    <FormControlComponent onSubmit={data => this.send(data)} render={
-                        handleChange => (
-                            <React.Fragment>
-                                <InputComponent text="Наименование" name="name" handleChange={handleChange} type="text" maxLength="50" required/>
-                                <TextAreaComponent text="Описание" name="description" handleChange={handleChange} required/>
-
-                                <div>
-                                    <a href="/createEvent/step1">Назад</a>
-                                    <button type="submit" className="button">Следующий шаг</button>
-                                </div>
-                            </React.Fragment>
-                        )
-                    }/>
-                </div>
+            <div className="create-event__background">
+            <div className="create-event__background">
+                <img className="checkboxes" src={checkboxes} />
             </div>
+            </div>
+            <div className="create-event__form">
+            <div className="step-text" >Шаг 2 из 3</div>
+                <h2 className="header-text">О мероприятии</h2>
+                <div className="label-text">Выбрать критерии в соответсвии с вашим видом спорта.</div>
+                <FormControlComponent onSubmit={data => this.send(data)} render={
+                    handleChange => (
+                        <React.Fragment>
+                            <InputComponent style={{ marginTop: '30px' }} classForLabel="label-text" text="Наименование" name="name" handleChange={handleChange} type="text" maxLength="50" required/>
+                            <TextAreaComponent classForLabel="label-text" text="Описание" name="description" handleChange={handleChange} required/>
+
+                            <div className="footer-buttons">
+                                    <div>
+                                        <span style={{ color: '#347CC4' }}>🠐</span>
+                                        <a href="/createEvent/step1" className="link">Назад</a>
+                                    </div>
+                                    <div>
+                                        <button type="submit" className="btn btn-primary">Cледующий шаг</button>
+                                    </div>
+                            </div>
+                        </React.Fragment>
+                    )
+                }/>
+            </div>
+        </div>
         )
     }
 }
